@@ -1,0 +1,8 @@
+{
+  "type": "node",
+  "name": "fcc-resource",
+  "git": {
+    "remote": ""
+  },
+  "internal": true
+}

@@ -1,0 +1,160 @@
+{
+  "host": "",
+  "errors": {
+    "error.COMMON_ERROR": {
+      "code": 1001500001,
+      "message": "[COMMON_ERROR]通用错误: ",
+      "data": null
+    },
+    "error.INTERNAL_ERROR": {
+      "code": -1,
+      "message": "[INTERNAL_ERROR]Internal Error: ",
+      "data": null
+    },
+    "error.BAD_REQUEST": {
+      "code": -2,
+      "message": "[BAD_REQUEST]入参检测错误: ",
+      "data": null
+    },
+    "error.NOT_FOUND": {
+      "code": -3,
+      "message": "[NOT_FOUND]not found: ",
+      "data": null
+    }
+  },
+  "apis": {
+    "index": {
+      "name": "index",
+      "desc": "index",
+      "group": "",
+      "request": {
+        "method": "get",
+        "path": "",
+        "query": {
+          "name": {
+            "_type": "string",
+            "_default": "Robot Xiaolan",
+            "_desc": "名字 ",
+            "_length": [
+              0,
+              9007199254740991
+            ]
+          }
+        },
+        "params": {},
+        "body": {}
+      },
+      "response": {
+        "body": {
+          "success": [
+            {
+              "code": {
+                "_type": "number",
+                "_assert": 200
+              },
+              "data": {
+                "name": {
+                  "_type": "string"
+                }
+              },
+              "message": {
+                "_type": "string"
+              }
+            }
+          ],
+          "failed": []
+        }
+      }
+    },
+    "get_book_list": {
+      "name": "get_book_list",
+      "desc": "get_book_list",
+      "group": "",
+      "request": {
+        "method": "get",
+        "path": "/book",
+        "query": {
+          "id": {
+            "_type": "array",
+            "_default": 0,
+            "_desc": "数据主键 ",
+            "_array_length": [
+              0,
+              100
+            ],
+            "_member_range": [
+              "0",
+              9007199254740991
+            ],
+            "_member_type": "number"
+          },
+          "name": {
+            "_type": "array",
+            "_default": "",
+            "_desc": "书名 ",
+            "_array_length": [
+              0,
+              100
+            ],
+            "_member_length": [
+              "0",
+              9007199254740991
+            ],
+            "_member_type": "string"
+          },
+          "page": {
+            "_type": "number",
+            "_default": 1,
+            "_desc": "页码 ",
+            "_range": [
+              1,
+              999
+            ]
+          }
+        },
+        "params": {},
+        "body": {}
+      },
+      "response": {
+        "body": {
+          "success": [
+            {
+              "code": {
+                "_type": "number",
+                "_assert": 200
+              },
+              "data": {
+                "data": [
+                  {
+                    "id": "number",
+                    "name": "string",
+                    "count": "number",
+                    "createTime": "number",
+                    "updateTime": "number"
+                  }
+                ],
+                "total": [
+                  {
+                    "id": "number",
+                    "name": "string",
+                    "count": "number",
+                    "createTime": "number",
+                    "updateTime": "number"
+                  }
+                ],
+                "page": {
+                  "_type": "undefined"
+                },
+                "pageSize": {}
+              },
+              "message": {
+                "_type": "string"
+              }
+            }
+          ],
+          "failed": []
+        }
+      }
+    }
+  }
+}

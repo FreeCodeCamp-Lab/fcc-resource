@@ -1,0 +1,17 @@
+{
+  "name": "fcc-resource",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "frog build && exit 0",
+    "dev": "frog build && node server.js",
+    "touch": "frog touch && exit 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "xiaolan": "^1.6.28"
+  }
+}
